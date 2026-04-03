@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>Hello, Flask!</h1><p>This is a basic Python app running in your browser.</p>"
+    return "<h1>Hello from Flask in Docker!</h1>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
 
